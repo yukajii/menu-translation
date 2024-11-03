@@ -11,15 +11,27 @@ const MenuViewer = () => {
   const restaurantId = new URLSearchParams(window.location.search).get('id') || 'default';
 
   useEffect(() => {
-    // In production, this would fetch from your /data directory
-    // For GitHub Pages, we'll store JSONs in /public/data/[restaurantId]/menu.json
-    fetch(`/data/${restaurantId}/menu.json`)
-      .then(response => response.json())
+    const baseUrl = import.meta.env.BASE_URL;
+    const menuUrl = `${baseUrl}data/${restaurantId}/menu.json`;
+    
+    console.log('Attempting to fetch menu from:', menuUrl);
+    
+    fetch(menuUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
+        console.log('Menu data received:', data);
         setMenuData(data);
         setAvailableLanguages(Object.keys(data.translations));
       })
-      .catch(error => console.error('Error loading menu:', error));
+      .catch(error => {
+        console.error('Error loading menu:', error);
+        setError(`Failed to load menu: ${error.message}`);
+      });
   }, [restaurantId]);
 
   if (!menuData) return <div className="p-4">Loading menu...</div>;
@@ -73,11 +85,11 @@ const MenuViewer = () => {
       {/* Original menu view */}
       {!showTranslation && (
         <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center min-h-[500px]">
-          <img
-            src={`/data/${restaurantId}/menu.jpg`}
-            alt="Original menu"
-            className="max-w-full h-auto rounded shadow-lg"
-          />
+            <img
+                src={`${import.meta.env.BASE_URL}data/${restaurantId}/menu.jpg`}
+                alt="Original menu"
+                className="max-w-full h-auto rounded shadow-lg"
+            />
         </div>
       )}
 
