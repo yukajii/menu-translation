@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Languages, Image as ImageIcon } from 'lucide-react';
+import { Languages, Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const MenuViewer = () => {
   const [showTranslation, setShowTranslation] = useState(false);
@@ -7,6 +7,7 @@ const MenuViewer = () => {
   const [menuData, setMenuData] = useState(null);
   const [availableLanguages, setAvailableLanguages] = useState([]);
   const [error, setError] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
   
   // Get restaurant ID from URL parameter
   const restaurantId = new URLSearchParams(window.location.search).get('id') || 'default';
@@ -44,6 +45,25 @@ const MenuViewer = () => {
   if (!menuData || !currentLanguage) return <div className="p-4">Loading menu...</div>;
 
   const currentTranslation = menuData.translations[currentLanguage];
+  const totalPages = menuData.pages?.length || 1;
+  
+  // Filter sections for current page
+  const currentPageSections = currentTranslation.sections.filter(
+    section => !section.page || section.page === currentPage
+  );
+
+  // Page navigation handlers
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const goToPrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
   return (
     <div className="max-w-3xl mx-auto p-4">
@@ -87,14 +107,45 @@ const MenuViewer = () => {
             Translated Menu
           </button>
         </div>
+
+        {/* Page navigation */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-4 mt-4">
+            <button
+              onClick={goToPrevPage}
+              disabled={currentPage === 1}
+              className={`p-2 rounded-lg ${
+                currentPage === 1 ? 'text-gray-400' : 'text-gray-900 hover:bg-gray-100'
+              }`}
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <span className="text-gray-900">
+              Page {currentPage} of {totalPages}
+              {menuData.pages?.[currentPage - 1]?.description && 
+                ` - ${menuData.pages[currentPage - 1].description}`}
+            </span>
+            <button
+              onClick={goToNextPage}
+              disabled={currentPage === totalPages}
+              className={`p-2 rounded-lg ${
+                currentPage === totalPages ? 'text-gray-400' : 'text-gray-900 hover:bg-gray-100'
+              }`}
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Original menu view */}
       {!showTranslation && (
         <div className="bg-gray-100 rounded-lg p-4 flex items-center justify-center min-h-[500px]">
             <img
-                src={`${import.meta.env.BASE_URL}data/${restaurantId}/menu.jpg`}
-                alt="Original menu"
+                src={`${import.meta.env.BASE_URL}data/${restaurantId}/${
+                  menuData.pages?.[currentPage - 1]?.image || 'menu.jpg'
+                }`}
+                alt={`Original menu - page ${currentPage}`}
                 className="max-w-full h-auto rounded shadow-lg"
             />
         </div>
@@ -103,7 +154,7 @@ const MenuViewer = () => {
       {/* Translated menu view */}
       {showTranslation && currentTranslation && (
         <div className="space-y-8">
-          {currentTranslation.sections.map((section, index) => (
+          {currentPageSections.map((section, index) => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
               <h2 className="text-xl font-semibold mb-4 text-gray-900">{section.name}</h2>
               <div className="space-y-6">

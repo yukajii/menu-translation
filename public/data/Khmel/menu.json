@@ -1,0 +1,349 @@
+{
+  "restaurant": "Khmel",
+  "pages": [
+    {
+      "image": "menu-1.jpg",
+      "description": "Appetizers"
+    },
+    {
+      "image": "menu-2.jpg",
+      "description": "Burgers"
+    },
+    {
+      "image": "menu-3.jpg",
+      "description": "Entrées"
+    },
+    {
+      "image": "menu-4.jpg",
+      "description": "Bières de notre brasserie"
+    }
+  ],
+  "translations": {
+    "french": {
+      "sections": [
+        {
+          "name": "Apéritifs",
+          "page": 1,
+          "items": [
+            {
+              "nameOriginal": "Гренки Бородинские",
+              "nameTranslated": "Croûtons Borodinski",
+              "description": "avec de l'huile d'ail et une sauce à la Dobrobro",
+              "descriptionOriginal": "с чесночным маслом и соусом для Добробро",
+              "price": "328₽",
+              "weight": 250
+            },
+            {
+              "nameOriginal": "Сыровяленная оленина",
+              "nameTranslated": "Viande de renne séchée",
+              "description": "avec une sauce aux airelles",
+              "descriptionOriginal": "с брусничным соусом",
+              "price": "589₽",
+              "weight": 180
+            },
+            {
+              "nameOriginal": "Кальмары в пивном тесте",
+              "nameTranslated": "Calmars en pâte à bière",
+              "description": "avec une sauce tartare",
+              "descriptionOriginal": "с соусом тартар",
+              "price": "598₽",
+              "weight": 370
+            },
+            {
+              "nameOriginal": "Куриные крылышки «Хмель»",
+              "nameTranslated": "Ailes de poulet «Khmél»",
+              "description": "avec une sauce savoureuse",
+              "descriptionOriginal": "с вкусным соусом",
+              "price": "625₽",
+              "weight": 360
+            }
+          ]
+        },
+        {
+          "name": "Burgers",
+          "page": 2,
+          "items": [
+            {
+              "nameOriginal": "Бургер из говядины",
+              "nameTranslated": "Burger de boeuf",
+              "description": "avec des frites et du ketchup",
+              "descriptionOriginal": "с картофельем фри и кетчупом",
+              "price": "1034₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Бургер из медведя",
+              "nameTranslated": "Burger d'ours",
+              "description": "avec des frites et du ketchup",
+              "descriptionOriginal": "с картофельем фри и кетчупом",
+              "price": "1056₽",
+              "weight": null
+            }
+          ]
+        },
+        {
+          "name": "Entrées",
+          "page": 3,
+          "items": [
+            {
+              "nameOriginal": "Креветки в хрустящей панировке",
+              "nameTranslated": "Crevettes en chapelure croustillante",
+              "description": "avec sauce aigre-douce",
+              "descriptionOriginal": "с кисло-сладким соусом",
+              "price": "787₽",
+              "weight": 300
+            },
+            {
+              "nameOriginal": "Мини-чебуреки «Хмель» с говядиной",
+              "nameTranslated": "Mini-chebureks «Khmel» au bœuf",
+              "description": "avec sauce adjika",
+              "descriptionOriginal": "с соусом аджикой",
+              "price": "925₽",
+              "weight": 320
+            },
+            {
+              "nameOriginal": "Креветочная сковорода",
+              "nameTranslated": "Poêle de crevettes",
+              "description": "",
+              "descriptionOriginal": "",
+              "price": "1545₽",
+              "weight": 365
+            },
+            {
+              "nameOriginal": "Пивной набор «Хмель»",
+              "nameTranslated": "Ensemble de bière «Khmel»",
+              "description": "(pour 4-5 personnes) croûtons de Borodino, poisson séché, ailes de poulet, crevettes en chapelure croustillante, mini-chebureks au bœuf, servis avec les sauces d'Ami Lyubov, sauce tartare",
+              "descriptionOriginal": "(на 4-5 персон) гренки бородинские, вяленая рыба, куриные крылышки, креветки в хрустящей панировке, мини-чебуреки с говядиной, сервируются соусами Ами Любовь, соусом тартар",
+              "price": "1587₽",
+              "weight": 965
+            }
+          ]
+        },
+        {
+          "name": "Bières de notre brasserie",
+          "page": 4,
+          "items": [
+            {
+              "nameOriginal": "Хмель Царское Светлое",
+              "nameTranslated": "Houblon Impérial Clair",
+              "description": "Filtrée, pasteurisée. Caractérisée par une amertume agréable et une légèreté de la bière.",
+              "descriptionOriginal": "фильтрованное, пастеризованное. Характерной особенностью данного сорта является приятная горечь и легкость пива.",
+              "price": "305/345₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Хмель Светлое",
+              "nameTranslated": "Houblon Clair",
+              "description": "Filtrée, pasteurisée.",
+              "descriptionOriginal": "фильтрованное, пастеризованное.",
+              "price": "305/345₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Хмель Яровое Пшеничное",
+              "nameTranslated": "Houblon Printemps Blé",
+              "description": "Non filtrée. Caractérisée par des notes fruitées et un goût de blé.",
+              "descriptionOriginal": "нефильтрованное. Для данного сорта характерен ярко выраженный фруктовый аромат и приятный вкус пшеницы.",
+              "price": "395/425₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Хмель Императорское",
+              "nameTranslated": "Houblon Impérial",
+              "description": "Non filtrée. Caractérisée par une amertume agréable.",
+              "descriptionOriginal": "нефильтрованное. Данный сорт выделяется приятной горечью.",
+              "price": "395/425₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Хмель Цыганское Черное",
+              "nameTranslated": "Houblon Gitan Noir",
+              "description": "Non filtrée. Caractérisée par un arôme de café et un goût de chocolat.",
+              "descriptionOriginal": "нефильтрованное. Характеризуется кофейным ароматом и привкусом шоколада.",
+              "price": "395/425₽",
+              "weight": null
+            }
+          ]
+        },
+        {
+          "name": "Cocktails de bière",
+          "page": 4,
+          "items": [
+            {
+              "nameOriginal": "Тропикана",
+              "nameTranslated": "Tropicana",
+              "description": "Bière légère, jus d'ananas, framboise, cerise.",
+              "descriptionOriginal": "светлое пиво, ананасовый сок, фреш малина, вишня.",
+              "price": "375₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Вишневый Бархат",
+              "nameTranslated": "Velours de Cerise",
+              "description": "Bière légère, liqueur de cerise.",
+              "descriptionOriginal": "светлое пиво, сироп вишня.",
+              "price": "375₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Хмельная Ягода",
+              "nameTranslated": "Baie Enivrante",
+              "description": "Bière légère, liqueur de cassis, framboise.",
+              "descriptionOriginal": "пшеничное пиво, черносмородиновая настойка, фреш малина.",
+              "price": "385₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Текила Бир",
+              "nameTranslated": "Tequila Beer",
+              "description": "Bière impériale, tequila, jus de pamplemousse, citron vert.",
+              "descriptionOriginal": "царское пиво, текила, грейпфрутовый сок, фреш лимон, лайм.",
+              "price": "395₽",
+              "weight": null
+            }
+          ]
+        }  
+      ]
+    },
+    "english": {
+      "sections": [
+        {
+          "name": "Appetizers",
+          "page": 1,
+          "items": [
+            {
+              "nameOriginal": "Гренки Бородинские",
+              "nameTranslated": "Borodinski Croutons",
+              "description": "with garlic oil and Dobrobro sauce",
+              "descriptionOriginal": "с чесночным маслом и соусом для Добробро",
+              "price": "328₽",
+              "weight": 250
+            },
+            {
+              "nameOriginal": "Сыровяленная оленина",
+              "nameTranslated": "Dried Venison",
+              "description": "with lingonberry sauce",
+              "descriptionOriginal": "с брусничным соусом",
+              "price": "589₽",
+              "weight": 180
+            },
+            {
+              "nameOriginal": "Кальмары в пивном тесте",
+              "nameTranslated": "Squid in Beer Batter",
+              "description": "with tartar sauce",
+              "descriptionOriginal": "с соусом тартар",
+              "price": "598₽",
+              "weight": 370
+            },
+            {
+              "nameOriginal": "Куриные крылышки «Хмель»",
+              "nameTranslated": "Chicken Wings «Khmél»",
+              "description": "with tasty sauce",
+              "descriptionOriginal": "с вкусным соусом",
+              "price": "625₽",
+              "weight": 360
+            }
+          ]
+        },
+        {
+          "name": "Burgers",
+          "page": 2,
+          "items": [
+            {
+              "nameOriginal": "Бургер из говядины",
+              "nameTranslated": "Beef Burger",
+              "description": "with fries and ketchup",
+              "descriptionOriginal": "с картофельем фри и кетчупом",
+              "price": "1034₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Бургер из медведя",
+              "nameTranslated": "Bear Burger",
+              "description": "with fries and ketchup",
+              "descriptionOriginal": "с картофельем фри и кетчупом",
+              "price": "1056₽",
+              "weight": null
+            }
+          ]
+        },
+        {
+          "name": "Appetizers",
+          "page": 3,
+          "items": [
+            {
+              "nameOriginal": "Креветки в хрустящей панировке",
+              "nameTranslated": "Shrimps in crispy breading",
+              "description": "with sweet and sour sauce",
+              "descriptionOriginal": "с кисло-сладким соусом",
+              "price": "787₽",
+              "weight": 300
+            },
+            {
+              "nameOriginal": "Мини-чебуреки «Хмель» с говядиной",
+              "nameTranslated": "Mini-chebureks «Khmel» with beef",
+              "description": "with adjika sauce",
+              "descriptionOriginal": "с соусом аджикой",
+              "price": "925₽",
+              "weight": 320
+            },
+            {
+              "nameOriginal": "Креветочная сковорода",
+              "nameTranslated": "Shrimp skillet",
+              "description": "",
+              "descriptionOriginal": "",
+              "price": "1545₽",
+              "weight": 365
+            },
+            {
+              "nameOriginal": "Пивной набор «Хмель»",
+              "nameTranslated": "Beer set «Khmel»",
+              "description": "(for 4-5 people) Borodino croutons, dried fish, chicken wings, shrimps in crispy breading, mini-chebureks with beef, served with Ami Lyubov sauces, tartar sauce",
+              "descriptionOriginal": "(на 4-5 персон) гренки бородинские, вяленая рыба, куриные крылышки, креветки в хрустящей панировке, мини-чебуреки с говядиной, сервируются соусами Ами Любовь, соусом тартар",
+              "price": "1587₽",
+              "weight": 965
+            }
+          ]
+        },
+        {
+          "name": "Cocktails de bière",
+          "page": 4,
+          "items": [
+            {
+              "nameOriginal": "Тропикана",
+              "nameTranslated": "Tropicana",
+              "description": "Bière légère, jus d'ananas, framboise, cerise.",
+              "descriptionOriginal": "светлое пиво, ананасовый сок, фреш малина, вишня.",
+              "price": "375₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Вишневый Бархат",
+              "nameTranslated": "Velours de Cerise",
+              "description": "Bière légère, liqueur de cerise.",
+              "descriptionOriginal": "светлое пиво, сироп вишня.",
+              "price": "375₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Хмельная Ягода",
+              "nameTranslated": "Baie Enivrante",
+              "description": "Bière légère, liqueur de cassis, framboise.",
+              "descriptionOriginal": "пшеничное пиво, черносмородиновая настойка, фреш малина.",
+              "price": "385₽",
+              "weight": null
+            },
+            {
+              "nameOriginal": "Текила Бир",
+              "nameTranslated": "Tequila Beer",
+              "description": "Bière impériale, tequila, jus de pamplemousse, citron vert.",
+              "descriptionOriginal": "царское пиво, текила, грейпфрутовый сок, фреш лимон, лайм.",
+              "price": "395₽",
+              "weight": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
