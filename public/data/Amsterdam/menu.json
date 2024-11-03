@@ -1,93 +1,103 @@
 {
-    "restaurant": "Amsterdam",
-    "translations": {
-      "french": {
-        "sections": [
-          {
-            "name": "Salades | Salads",
-            "items": [
-              {
-                "nameOriginal": "Печено цвекло с фермерски катък, орехи, прясно приготвено босилеково песто и билкови брускети",
-                "nameTranslated": "Betteraves rôties avec katyk fermier, noix, pesto de basilic fraîchement préparé et bruschetta aux herbes",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "12.90 BGN"
-              },
-              {
-                "nameOriginal": "Шефска салата с домати, краставици, късчета хляб, зелена чушка, зелен лук, сирене, печена капия, катък, люта чушка, маслини",
-                "nameTranslated": "Salade du chef avec tomates, concombres, morceaux de pain, poivron vert, oignon vert, fromage, poivron rouge rôti, katyk, piment, olives",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "14.90 BGN"
-              },
-              {
-                "nameOriginal": "Двойно мариновани зелени домати с копър и чесън по стара родова рецепта",
-                "nameTranslated": "Tomates vertes doublement marinées à l'aneth et à l'ail selon une vieille recette familiale",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "8.90 BGN"
-              },
-              {
-                "nameOriginal": "Балканска салата с розов домат, мус от патладжан, прясно краве сирене, домашно изпечена и маринована червена капия, маринован червен лук, маслини, яйца и магданозено песто",
-                "nameTranslated": "Salade balkanique avec tomate rose, mousse d'aubergine, fromage de vache frais, poivron rouge rôti et mariné, oignon rouge mariné, olives, œufs et pesto de persil",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "15.40 BGN"
-              },
-              {
-                "nameOriginal": "Холандска салата с айсберг, чедър варени яйца, кисели краставички, леко пикантен млечен дресинг с горчица, ябълка и лук",
-                "nameTranslated": "Salade hollandaise avec laitue iceberg, cheddar, œufs durs, cornichons, vinaigrette légèrement épicée au lait avec moutarde, pomme et oignon",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "14.90 BGN"
-              }
-            ]
-          }
-        ],
-      "spanish": {
-        "sections": [
-          {
-            "name": "Salades | Salads",
-            "items": [
-              {
-                "nameOriginal": "SPANISHПечено цвекло с фермерски катък, орехи, прясно приготвено босилеково песто и билкови брускети",
-                "nameTranslated": "SPANISHBetteraves rôties avec katyk fermier, noix, pesto de basilic fraîchement préparé et bruschetta aux herbes",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "12.90 BGN"
-              },
-              {
-                "nameOriginal": "SPANISHШефска салата с домати, краставици, късчета хляб, зелена чушка, зелен лук, сирене, печена капия, катък, люта чушка, маслини",
-                "nameTranslated": "SPANISHSalade du chef avec tomates, concombres, morceaux de pain, poivron vert, oignon vert, fromage, poivron rouge rôti, katyk, piment, olives",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "14.90 BGN"
-              },
-              {
-                "nameOriginal": "Двойно мариновани зелени домати с копър и чесън по стара родова рецепта",
-                "nameTranslated": "Tomates vertes doublement marinées à l'aneth et à l'ail selon une vieille recette familiale",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "8.90 BGN"
-              },
-              {
-                "nameOriginal": "Балканска салата с розов домат, мус от патладжан, прясно краве сирене, домашно изпечена и маринована червена капия, маринован червен лук, маслини, яйца и магданозено песто",
-                "nameTranslated": "Salade balkanique avec tomate rose, mousse d'aubergine, fromage de vache frais, poivron rouge rôti et mariné, oignon rouge mariné, olives, œufs et pesto de persil",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "15.40 BGN"
-              },
-              {
-                "nameOriginal": "Холандска салата с айсберг, чедър варени яйца, кисели краставички, леко пикантен млечен дресинг с горчица, ябълка и лук",
-                "nameTranslated": "Salade hollandaise avec laitue iceberg, cheddar, œufs durs, cornichons, vinaigrette légèrement épicée au lait avec moutarde, pomme et oignon",
-                "description": "",
-                "descriptionOriginal": "",
-                "price": "14.90 BGN"
-              }
-            ]
-          }
-        ]
-      }
+  "restaurant": "Amsterdam",
+  "translations": {
+    "french": {
+      "sections": [
+        {
+          "name": "Salades",
+          "items": [
+            {
+              "nameOriginal": "Roasted beets with farmers katyk",
+              "nameTranslated": "Betteraves rôties avec katyk fermier",
+              "description": "Betteraves rôties avec katyk fermier, noix, pesto de basilic frais et bruschetta aux herbes",
+              "descriptionOriginal": "Roasted beets with farmers katyk, walnuts, freshly made basil pesto and herb bruschetta's",
+              "price": "12.90 BGN",
+              "weight": 380
+            },
+            {
+              "nameOriginal": "Chef's salad with tomatoes",
+              "nameTranslated": "Salade du chef avec tomates",
+              "description": "Salade du chef avec tomates, concombres, morceaux de pain, fromage grec, oignon vert, couscous, poivron rouge rôti, katyk, piment, olives",
+              "descriptionOriginal": "Chef's salad with tomatoes, cucumbers, pieces of bread, green pepper, green onion, white cous' cheese, roasted red pepper, katyk, hot pepper, olives",
+              "price": "14.90 BGN",
+              "weight": 450
+            },
+            {
+              "nameOriginal": "Double marinated green tomatoes",
+              "nameTranslated": "Tomates vertes doublement marinées",
+              "description": "Tomates vertes doublement marinées à l'aneth et à l'ail selon une vieille recette familiale",
+              "descriptionOriginal": "Double marinated green tomatoes with dill and garlic according to an old family recipe",
+              "price": "8.90 BGN",
+              "weight": 220
+            },
+            {
+              "nameOriginal": "Balkan salad with pink heirloom tomato",
+              "nameTranslated": "Salade balkanique avec tomate rose héritage",
+              "description": "Salade balkanique avec tomate rose héritage, mousse d'aubergine, fromage frais, fromage de vache, pain fait maison et poivron rouge mariné, oignon rouge mariné, olives, œufs et pesto de persil",
+              "descriptionOriginal": "Balkan salad with pink heirloom tomato, eggplant mousse, fresh cow's cheese, home-baked and marinated red pepper, marinated red onion, olives, eggs and parsley pesto",
+              "price": "15.40 BGN",
+              "weight": 460
+            },
+            {
+              "nameOriginal": "Dutch salad with iceberg lettuce",
+              "nameTranslated": "Salade hollandaise avec laitue iceberg",
+              "description": "Salade hollandaise avec laitue iceberg, cheddar, œufs durs, cornichons, vinaigrette légèrement épicée au yaourt avec moutarde, pomme et oignon",
+              "descriptionOriginal": "Dutch salad with iceberg lettuce, cheddar, boiled eggs, pickles, slightly spicy yogurt dressing with mustard, apple and onion",
+              "price": "14.90 BGN",
+              "weight": 300
+            }
+          ]
+        }
+      ]
+    },
+    "spanish": {
+      "sections": [
+        {
+          "name": "Ensaladas",
+          "items": [
+            {
+              "nameOriginal": "Roasted beets with farmers katyk",
+              "nameTranslated": "Remolachas asadas con katyk de granja",
+              "description": "Remolachas asadas con katyk de granja, nueces, pesto de albahaca fresca y bruschetta de hierbas",
+              "descriptionOriginal": "Roasted beets with farmers katyk, walnuts, freshly made basil pesto and herb bruschetta's",
+              "price": "12.90 BGN",
+              "weight": 380
+            },
+            {
+              "nameOriginal": "Chef's salad with tomatoes",
+              "nameTranslated": "Ensalada del chef con tomates",
+              "description": "Ensalada del chef con tomates, pepinos, trozos de pan, queso griego, cebolla verde, couscous, pimiento rojo asado, katyk, pimiento picante, aceitunas",
+              "descriptionOriginal": "Chef's salad with tomatoes, cucumbers, pieces of bread, green pepper, green onion, white cous' cheese, roasted red pepper, katyk, hot pepper, olives",
+              "price": "14.90 BGN",
+              "weight": 450
+            },
+            {
+              "nameOriginal": "Double marinated green tomatoes",
+              "nameTranslated": "Tomates verdes doblemente marinados",
+              "description": "Tomates verdes doblemente marinados con eneldo y ajo según una receta familiar antigua",
+              "descriptionOriginal": "Double marinated green tomatoes with dill and garlic according to an old family recipe",
+              "price": "8.90 BGN",
+              "weight": 220
+            },
+            {
+              "nameOriginal": "Balkan salad with pink heirloom tomato",
+              "nameTranslated": "Ensalada balcánica con tomate rosa",
+              "description": "Ensalada balcánica con tomate rosa, mousse de berenjena, queso fresco de vaca, pan casero y pimiento rojo marinado, cebolla roja marinada, aceitunas, huevos y pesto de perejil",
+              "descriptionOriginal": "Balkan salad with pink heirloom tomato, eggplant mousse, fresh cow's cheese, home-baked and marinated red pepper, marinated red onion, olives, eggs and parsley pesto",
+              "price": "15.40 BGN",
+              "weight": 460
+            },
+            {
+              "nameOriginal": "Dutch salad with iceberg lettuce",
+              "nameTranslated": "Ensalada holandesa con lechuga iceberg",
+              "description": "Ensalada holandesa con lechuga iceberg, cheddar, huevos cocidos, pepinillos, aderezo de yogur ligeramente picante con mostaza, manzana y cebolla",
+              "descriptionOriginal": "Dutch salad with iceberg lettuce, cheddar, boiled eggs, pickles, slightly spicy yogurt dressing with mustard, apple and onion",
+              "price": "14.90 BGN",
+              "weight": 300
+            }
+          ]
+        }
+      ]
     }
   }
 }
