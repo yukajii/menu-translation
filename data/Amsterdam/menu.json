@@ -1,35 +1,88 @@
 {
-    "restaurant": "La Maison",
+    "restaurant": "Amsterdam",
     "translations": {
-      "english": {
+      "french": {
         "sections": [
           {
-            "name": "Appetizers | Entrées",
+            "name": "Salades | Salads",
             "items": [
               {
-                "nameOriginal": "Soupe à l'Oignon",
-                "nameTranslated": "French Onion Soup",
-                "description": "Traditional onion soup with melted Gruyère cheese",
-                "descriptionOriginal": "Soupe traditionnelle aux oignons gratinée au Gruyère",
-                "price": "€12",
-                "weight": 300
+                "nameOriginal": "Печено цвекло с фермерски катък, орехи, прясно приготвено босилеково песто и билкови брускети",
+                "nameTranslated": "Betteraves rôties avec katyk fermier, noix, pesto de basilic fraîchement préparé et bruschetta aux herbes",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "12.90 BGN"
+              },
+              {
+                "nameOriginal": "Шефска салата с домати, краставици, късчета хляб, зелена чушка, зелен лук, сирене, печена капия, катък, люта чушка, маслини",
+                "nameTranslated": "Salade du chef avec tomates, concombres, morceaux de pain, poivron vert, oignon vert, fromage, poivron rouge rôti, katyk, piment, olives",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "14.90 BGN"
+              },
+              {
+                "nameOriginal": "Двойно мариновани зелени домати с копър и чесън по стара родова рецепта",
+                "nameTranslated": "Tomates vertes doublement marinées à l'aneth et à l'ail selon une vieille recette familiale",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "8.90 BGN"
+              },
+              {
+                "nameOriginal": "Балканска салата с розов домат, мус от патладжан, прясно краве сирене, домашно изпечена и маринована червена капия, маринован червен лук, маслини, яйца и магданозено песто",
+                "nameTranslated": "Salade balkanique avec tomate rose, mousse d'aubergine, fromage de vache frais, poivron rouge rôti et mariné, oignon rouge mariné, olives, œufs et pesto de persil",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "15.40 BGN"
+              },
+              {
+                "nameOriginal": "Холандска салата с айсберг, чедър варени яйца, кисели краставички, леко пикантен млечен дресинг с горчица, ябълка и лук",
+                "nameTranslated": "Salade hollandaise avec laitue iceberg, cheddar, œufs durs, cornichons, vinaigrette légèrement épicée au lait avec moutarde, pomme et oignon",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "14.90 BGN"
               }
             ]
           }
-        ]
-      },
+        ],
       "spanish": {
         "sections": [
           {
-            "name": "Appetizers | Entrées",
+            "name": "Salades | Salads",
             "items": [
               {
-                "nameOriginal": "Soupe à l'Oignon SPANISH",
-                "nameTranslated": "French Onion SoupSPANISH",
-                "description": "Traditional onion soup with melted Gruyère cheeseSPANISH",
-                "descriptionOriginal": "Soupe traditionnelle aux oignons gratinée au GruyèreSPANISH",
-                "price": "€12",
-                "weight": 300
+                "nameOriginal": "SPANISHПечено цвекло с фермерски катък, орехи, прясно приготвено босилеково песто и билкови брускети",
+                "nameTranslated": "SPANISHBetteraves rôties avec katyk fermier, noix, pesto de basilic fraîchement préparé et bruschetta aux herbes",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "12.90 BGN"
+              },
+              {
+                "nameOriginal": "SPANISHШефска салата с домати, краставици, късчета хляб, зелена чушка, зелен лук, сирене, печена капия, катък, люта чушка, маслини",
+                "nameTranslated": "SPANISHSalade du chef avec tomates, concombres, morceaux de pain, poivron vert, oignon vert, fromage, poivron rouge rôti, katyk, piment, olives",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "14.90 BGN"
+              },
+              {
+                "nameOriginal": "Двойно мариновани зелени домати с копър и чесън по стара родова рецепта",
+                "nameTranslated": "Tomates vertes doublement marinées à l'aneth et à l'ail selon une vieille recette familiale",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "8.90 BGN"
+              },
+              {
+                "nameOriginal": "Балканска салата с розов домат, мус от патладжан, прясно краве сирене, домашно изпечена и маринована червена капия, маринован червен лук, маслини, яйца и магданозено песто",
+                "nameTranslated": "Salade balkanique avec tomate rose, mousse d'aubergine, fromage de vache frais, poivron rouge rôti et mariné, oignon rouge mariné, olives, œufs et pesto de persil",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "15.40 BGN"
+              },
+              {
+                "nameOriginal": "Холандска салата с айсберг, чедър варени яйца, кисели краставички, леко пикантен млечен дресинг с горчица, ябълка и лук",
+                "nameTranslated": "Salade hollandaise avec laitue iceberg, cheddar, œufs durs, cornichons, vinaigrette légèrement épicée au lait avec moutarde, pomme et oignon",
+                "description": "",
+                "descriptionOriginal": "",
+                "price": "14.90 BGN"
               }
             ]
           }
@@ -37,3 +90,4 @@
       }
     }
   }
+}
