@@ -75,7 +75,10 @@ const LandingPage = () => {
                 Experience how your customers will interact with your translated menu. 
                 Scan the QR code or click to view our demo restaurant menu.
               </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              <button 
+                onClick={() => window.location.href = '/Khmel'}
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
                 View Demo Menu
               </button>
             </div>

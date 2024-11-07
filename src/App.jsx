@@ -7,7 +7,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/menu" element={<MenuViewer />} />
+        {/* Change the route to handle the id parameter */}
+        <Route path="/:id?" element={<MenuViewer />} />
       </Routes>
     </Router>
   );

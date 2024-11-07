@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Languages, Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 
+import { useParams } from 'react-router-dom';
+
 const MenuViewer = () => {
   const [showTranslation, setShowTranslation] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(null);
@@ -10,7 +12,8 @@ const MenuViewer = () => {
   const [currentPage, setCurrentPage] = useState(1);
   
   // Get restaurant ID from URL parameter
-  const restaurantId = new URLSearchParams(window.location.search).get('id') || 'default';
+  const { id } = useParams();
+  const restaurantId = id || 'default';
 
   useEffect(() => {
     // Use relative path for production with custom domain
