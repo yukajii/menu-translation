@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Languages, Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
-
 import { useParams } from 'react-router-dom';
 
 const MenuViewer = () => {
@@ -11,12 +10,10 @@ const MenuViewer = () => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   
-  // Get restaurant ID from URL parameter
   const { id } = useParams();
   const restaurantId = id || 'default';
 
   useEffect(() => {
-    // Use relative path for production with custom domain
     const menuUrl = `/data/${restaurantId}/menu.json`;
     
     console.log('Attempting to fetch menu from:', menuUrl);
@@ -33,7 +30,6 @@ const MenuViewer = () => {
         setMenuData(data);
         const languages = Object.keys(data.translations);
         setAvailableLanguages(languages);
-        // Set initial language to the first available translation
         if (languages.length > 0 && !currentLanguage) {
           setCurrentLanguage(languages[0]);
         }
@@ -50,12 +46,10 @@ const MenuViewer = () => {
   const currentTranslation = menuData.translations[currentLanguage];
   const totalPages = menuData.pages?.length || 1;
   
-  // Filter sections for current page
   const currentPageSections = currentTranslation.sections.filter(
     section => !section.page || section.page === currentPage
   );
 
-  // Page navigation handlers
   const goToNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
@@ -69,8 +63,8 @@ const MenuViewer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto p-4 w-full">
+    <div className="min-h-screen bg-white w-full">
+      <div className="w-full max-w-6xl mx-auto px-4 py-6">
         {/* Header with restaurant name and language selector */}
         <div className="mb-6">
           <h1 className="text-2xl font-bold mb-4 text-gray-900">{menuData.restaurant}</h1>
@@ -118,7 +112,7 @@ const MenuViewer = () => {
               <button
                 onClick={goToPrevPage}
                 disabled={currentPage === 1}
-                className={`p-2 rounded-lg ${
+                className={`p-2 rounded-lg bg-white ${
                   currentPage === 1 ? 'text-gray-400' : 'text-gray-900 hover:bg-gray-100'
                 }`}
               >
@@ -132,7 +126,7 @@ const MenuViewer = () => {
               <button
                 onClick={goToNextPage}
                 disabled={currentPage === totalPages}
-                className={`p-2 rounded-lg ${
+                className={`p-2 rounded-lg bg-white ${
                   currentPage === totalPages ? 'text-gray-400' : 'text-gray-900 hover:bg-gray-100'
                 }`}
               >
