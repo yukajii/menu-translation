@@ -3,10 +3,10 @@ import { ArrowRight, Languages, QrCode, Clock, CreditCard } from 'lucide-react';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 w-full">
+        <div className="max-w-6xl mx-auto px-4 w-full">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Multilingual Menus Made Simple
@@ -26,8 +26,8 @@ const LandingPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="py-20 bg-white w-full">
+        <div className="max-w-6xl mx-auto px-4 w-full">
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose MenuTap</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard 
@@ -68,7 +68,7 @@ const LandingPage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">See It In Action</h2>
-          <div className="bg-gray-100 p-8 rounded-lg flex flex-col md:flex-row items-center gap-8">
+          <div className="bg-gray-100 p-8 rounded-lg flex flex-col md:flex-row items-center gap-8 w-full">
             <div className="flex-1">
               <h3 className="text-2xl font-semibold mb-4">Try Our Demo Menu</h3>
               <p className="mb-6">
@@ -98,7 +98,7 @@ const LandingPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Simple Pricing</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto w-full">
             <PriceCard 
               title="Standard"
               price="€29"
@@ -232,19 +232,19 @@ const Step = ({ number, title, description }) => (
 );
 
 const PriceCard = ({ title, price, period, features, highlighted = false }) => (
-  <div className={`p-8 rounded-lg ${highlighted ? 'bg-blue-600 text-white' : 'bg-white'}`}>
+  <div className={`p-8 rounded-lg w-full ${highlighted ? 'bg-blue-600 text-white' : 'bg-white text-gray-900'}`}>
     <h3 className="text-2xl font-bold mb-2">{title}</h3>
     <div className="mb-6">
       <span className="text-4xl font-bold">{price}</span>
-      <span className={`${highlighted ? 'text-blue-100' : 'text-gray-500'}`}>
+      <span className={`${highlighted ? 'text-blue-100' : 'text-gray-600'}`}>
         {period}
       </span>
     </div>
-    <ul className="space-y-4">
+    <ul className="space-y-4 text-left">
       {features.map((feature, index) => (
         <li key={index} className="flex items-center gap-2">
           <svg
-            className={`w-5 h-5 ${highlighted ? 'text-blue-100' : 'text-blue-600'}`}
+            className={`w-5 h-5 flex-shrink-0 ${highlighted ? 'text-blue-100' : 'text-blue-600'}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -256,7 +256,9 @@ const PriceCard = ({ title, price, period, features, highlighted = false }) => (
               d="M5 13l4 4L19 7"
             />
           </svg>
-          {feature}
+          <span className={highlighted ? 'text-white' : 'text-gray-700'}>
+            {feature}
+          </span>
         </li>
       ))}
     </ul>
