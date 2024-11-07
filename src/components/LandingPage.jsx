@@ -64,14 +64,14 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Demo Section */}
+      {/* Demo Section - Fixed text contrast */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">See It In Action</h2>
           <div className="bg-gray-100 p-8 rounded-lg flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
-              <h3 className="text-2xl font-semibold mb-4">Try Our Demo Menu</h3>
-              <p className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Try Our Demo Menu</h3>
+              <p className="mb-6 text-gray-700">
                 Experience how your customers will interact with your translated menu. 
                 Scan the QR code or click to view our demo restaurant menu.
               </p>
@@ -81,8 +81,7 @@ const LandingPage = () => {
             </div>
             <div className="flex-1 flex justify-center">
               <div className="bg-white p-4 rounded-lg shadow-lg">
-                {/* Replace with actual QR code image */}
-                <div className="w-48 h-48 bg-gray-200 rounded flex items-center justify-center">
+                <div className="w-48 h-48 bg-gray-200 rounded flex items-center justify-center text-gray-600">
                   QR Code Demo
                 </div>
               </div>
@@ -91,7 +90,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing Section - Fixed text contrast */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Simple Pricing</h2>
@@ -228,12 +227,15 @@ const Step = ({ number, title, description }) => (
   </div>
 );
 
+// Updated PriceCard component with better contrast
 const PriceCard = ({ title, price, period, features, highlighted = false }) => (
-  <div className={`p-8 rounded-lg ${highlighted ? 'bg-blue-600 text-white' : 'bg-white'}`}>
+  <div className={`p-8 rounded-lg ${
+    highlighted ? 'bg-blue-600 text-white' : 'bg-white shadow-lg'
+  }`}>
     <h3 className="text-2xl font-bold mb-2">{title}</h3>
     <div className="mb-6">
       <span className="text-4xl font-bold">{price}</span>
-      <span className={`${highlighted ? 'text-blue-100' : 'text-gray-500'}`}>
+      <span className={highlighted ? 'text-blue-100' : 'text-gray-500'}>
         {period}
       </span>
     </div>
@@ -253,16 +255,18 @@ const PriceCard = ({ title, price, period, features, highlighted = false }) => (
               d="M5 13l4 4L19 7"
             />
           </svg>
-          {feature}
+          <span className={highlighted ? 'text-white' : 'text-gray-700'}>
+            {feature}
+          </span>
         </li>
       ))}
     </ul>
     <button 
-      className={`mt-8 w-full py-3 rounded-lg font-semibold transition-colors
-        ${highlighted 
+      className={`mt-8 w-full py-3 rounded-lg font-semibold transition-colors ${
+        highlighted 
           ? 'bg-white text-blue-600 hover:bg-blue-50' 
           : 'bg-blue-600 text-white hover:bg-blue-700'
-        }`}
+      }`}
     >
       Get Started
     </button>
