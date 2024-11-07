@@ -3,15 +3,15 @@ import { ArrowRight, Languages, QrCode, Clock } from 'lucide-react';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="relative w-full">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col items-center text-center">
+      <div className="relative bg-gradient-to-r from-blue-600 to-blue-800">
+        <div className="max-w-6xl mx-auto px-4 py-20">
+          <div className="flex flex-col items-center text-center text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Multilingual Menus Made Simple
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-2xl text-white">
+            <p className="text-xl md:text-2xl mb-8 max-w-2xl">
               Help international customers navigate your menu with ease. 
               Professional translations, QR code access, instant updates.
             </p>
@@ -23,11 +23,11 @@ const LandingPage = () => {
             </button>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="relative bg-white">
+        <div className="max-w-6xl mx-auto px-4 py-20">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose MenuTap</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard 
@@ -47,11 +47,11 @@ const LandingPage = () => {
             />
           </div>
         </div>
-      </section>
+      </div>
 
       {/* How It Works */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="relative bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 py-20">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Step number="1" title="Submit Your Menu" 
@@ -62,11 +62,11 @@ const LandingPage = () => {
               description="Receive your QR code and digital menu system ready to use." />
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Demo Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="relative bg-white">
+        <div className="max-w-6xl mx-auto px-4 py-20">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">See It In Action</h2>
           <div className="bg-gray-100 p-8 rounded-lg flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
@@ -91,11 +91,11 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="relative bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 py-20">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Simple Pricing</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <PriceCard 
@@ -126,11 +126,11 @@ const LandingPage = () => {
             />
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4">
+      <div className="relative bg-white">
+        <div className="max-w-3xl mx-auto px-4 py-20">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Get Started Today</h2>
           <form className="space-y-6">
             <div>
@@ -171,11 +171,11 @@ const LandingPage = () => {
             </button>
           </form>
         </div>
-      </section>
+      </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="relative bg-gray-900 text-white">
+        <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">MenuTap</h3>
@@ -206,12 +206,12 @@ const LandingPage = () => {
             © {new Date().getFullYear()} MenuTap. All rights reserved.
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
 
-// Helper Components
+// Helper Components remain the same
 const FeatureCard = ({ icon, title, description }) => (
   <div className="text-center p-6 bg-white rounded-lg shadow-sm">
     <div className="flex justify-center mb-4">{icon}</div>
