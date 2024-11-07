@@ -3,10 +3,10 @@ import { ArrowRight, Languages, QrCode, Clock } from 'lucide-react';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen w-full">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 w-full">
-        <div className="w-full max-w-6xl mx-auto px-4">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Multilingual Menus Made Simple
@@ -26,8 +26,8 @@ const LandingPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-6xl mx-auto px-4">
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose MenuTap</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard 
@@ -50,8 +50,8 @@ const LandingPage = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-gray-50 w-full">
-        <div className="w-full max-w-6xl mx-auto px-4">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Step number="1" title="Submit Your Menu" 
@@ -65,10 +65,10 @@ const LandingPage = () => {
       </section>
 
       {/* Demo Section */}
-      <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-6xl mx-auto px-4">
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">See It In Action</h2>
-          <div className="bg-gray-100 p-8 rounded-lg flex flex-col md:flex-row items-center gap-8 w-full">
+          <div className="bg-gray-100 p-8 rounded-lg flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Try Our Demo Menu</h3>
               <p className="mb-6 text-gray-700">
@@ -94,8 +94,8 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-50 w-full">
-        <div className="w-full max-w-6xl mx-auto px-4">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Simple Pricing</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <PriceCard 
@@ -129,8 +129,8 @@ const LandingPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white w-full">
-        <div className="w-full max-w-3xl mx-auto px-4">
+      <section id="contact" className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Get Started Today</h2>
           <form className="space-y-6">
             <div>
@@ -174,8 +174,8 @@ const LandingPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 w-full">
-        <div className="w-full max-w-6xl mx-auto px-4">
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">MenuTap</h3>
@@ -213,7 +213,7 @@ const LandingPage = () => {
 
 // Helper Components
 const FeatureCard = ({ icon, title, description }) => (
-  <div className="text-center p-6 bg-white">
+  <div className="text-center p-6 bg-white rounded-lg shadow-sm">
     <div className="flex justify-center mb-4">{icon}</div>
     <h3 className="text-xl font-semibold mb-2 text-gray-900">{title}</h3>
     <p className="text-gray-600">{description}</p>
@@ -221,7 +221,7 @@ const FeatureCard = ({ icon, title, description }) => (
 );
 
 const Step = ({ number, title, description }) => (
-  <div className="text-center p-6 bg-white rounded-lg">
+  <div className="text-center p-6 bg-white rounded-lg shadow-sm">
     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
       {number}
     </div>
@@ -231,10 +231,14 @@ const Step = ({ number, title, description }) => (
 );
 
 const PriceCard = ({ title, price, period, features, highlighted = false }) => (
-  <div className={`p-8 rounded-lg ${highlighted ? 'bg-blue-600' : 'bg-white'}`}>
-    <h3 className={`text-2xl font-bold mb-2 ${highlighted ? 'text-white' : 'text-gray-900'}`}>{title}</h3>
+  <div className={`p-8 rounded-lg shadow-sm ${highlighted ? 'bg-blue-600' : 'bg-white'}`}>
+    <h3 className={`text-2xl font-bold mb-2 ${highlighted ? 'text-white' : 'text-gray-900'}`}>
+      {title}
+    </h3>
     <div className="mb-6">
-      <span className={`text-4xl font-bold ${highlighted ? 'text-white' : 'text-gray-900'}`}>{price}</span>
+      <span className={`text-4xl font-bold ${highlighted ? 'text-white' : 'text-gray-900'}`}>
+        {price}
+      </span>
       <span className={highlighted ? 'text-blue-100' : 'text-gray-600'}>
         {period}
       </span>
