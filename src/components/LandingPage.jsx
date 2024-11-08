@@ -250,8 +250,7 @@ const LandingPage = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Contact</h3>
               <p className="text-gray-400">
-                Email: hello@menutap.biz<br />
-                Location: Berlin, Germany
+                Email: contact@menutap.biz                
               </p>
             </div>
             <div>

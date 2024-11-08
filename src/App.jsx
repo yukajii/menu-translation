@@ -8,8 +8,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/:id?" element={<MenuViewer />} />
         <Route path="/legal/:document" element={<LegalPage />} />
+        <Route path="/:id?" element={<MenuViewer />} />
       </Routes>
     </Router>
   );
