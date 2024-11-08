@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Languages, Image as ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Languages, Menu, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useParams } from 'react-router-dom';
 
 const MenuViewer = () => {
