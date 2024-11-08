@@ -84,20 +84,20 @@ const MenuViewer = () => {
   };
 
   return (
-    <div className="min-h-screen w-screen overflow-x-hidden bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen w-screen overflow-x-hidden bg-white">
+      <div className="container mx-auto p-4 sm:py-8">
         {/* Header with restaurant name and controls */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-          <h1 className="text-3xl font-bold mb-6 text-gray-900">{menuData.restaurant}</h1>
+        <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-gray-900">{menuData.restaurant}</h1>
           
-          <div className="space-y-6">
+          <div className="space-y-4">
             {/* Language selector */}
-            <div className="flex flex-wrap items-center gap-4">
-              <label className="font-medium text-gray-700">Select Language:</label>
+            <div className="flex items-center gap-3">
+              <label className="font-medium text-gray-700 text-sm sm:text-base">Select Language:</label>
               <select 
                 value={currentLanguage}
                 onChange={(e) => setCurrentLanguage(e.target.value)}
-                className="px-4 py-2 border rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="flex-1 sm:flex-none px-3 py-1.5 sm:px-4 sm:py-2 border rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm sm:text-base"
               >
                 {availableLanguages.map(lang => (
                   <option key={lang} value={lang}>
@@ -108,42 +108,42 @@ const MenuViewer = () => {
             </div>
 
             {/* View toggle */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex gap-2 sm:gap-4">
               <button
                 onClick={() => setShowTranslation(false)}
-                className={`flex items-center gap-2 px-6 py-2 rounded-lg font-medium transition-colors ${
+                className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 sm:px-6 py-2 rounded-lg font-medium text-sm sm:text-base transition-colors ${
                   !showTranslation ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}
               >
-                <ImageIcon size={20} />
+                <Menu size={18} className="flex-shrink-0" />
                 Original Menu
               </button>
               <button
                 onClick={() => setShowTranslation(true)}
-                className={`flex items-center gap-2 px-6 py-2 rounded-lg font-medium transition-colors ${
+                className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 sm:px-6 py-2 rounded-lg font-medium text-sm sm:text-base transition-colors ${
                   showTranslation ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}
               >
-                <Languages size={20} />
+                <Languages size={18} className="flex-shrink-0" />
                 Translated Menu
               </button>
             </div>
 
             {/* Page navigation */}
             {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-4 pt-4 border-t border-gray-100">
+              <div className="flex items-center justify-center gap-3 pt-3 border-t border-gray-100 mt-4">
                 <button
                   onClick={goToPrevPage}
                   disabled={currentPage === 1}
-                  className={`p-2 rounded-lg transition-colors ${
+                  className={`p-1.5 rounded-lg transition-colors ${
                     currentPage === 1 
-                      ? 'text-gray-400 cursor-not-allowed' 
-                      : 'text-gray-900 hover:bg-gray-100'
+                      ? 'text-gray-300 cursor-not-allowed' 
+                      : 'text-gray-700 hover:bg-gray-100'
                   }`}
                 >
-                  <ChevronLeft size={24} />
+                  <ChevronLeft size={20} />
                 </button>
-                <span className="text-gray-900 font-medium">
+                <span className="text-gray-900 font-medium text-sm sm:text-base">
                   Page {currentPage} of {totalPages}
                   {menuData.pages?.[currentPage - 1]?.description && 
                     ` - ${menuData.pages[currentPage - 1].description}`}
@@ -151,20 +151,20 @@ const MenuViewer = () => {
                 <button
                   onClick={goToNextPage}
                   disabled={currentPage === totalPages}
-                  className={`p-2 rounded-lg transition-colors ${
+                  className={`p-1.5 rounded-lg transition-colors ${
                     currentPage === totalPages 
-                      ? 'text-gray-400 cursor-not-allowed' 
-                      : 'text-gray-900 hover:bg-gray-100'
+                      ? 'text-gray-300 cursor-not-allowed' 
+                      : 'text-gray-700 hover:bg-gray-100'
                   }`}
                 >
-                  <ChevronRight size={24} />
+                  <ChevronRight size={20} />
                 </button>
               </div>
             )}
           </div>
         </div>
 
-        {/* Menu content */}
+        {/* Menu content remains the same */}
         <div className="max-w-3xl mx-auto">
           {/* Original menu view */}
           {!showTranslation && (
