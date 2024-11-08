@@ -1,7 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Languages, QrCode, Clock } from 'lucide-react';
 
 const LandingPage = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xpwzdepz', {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        e.target.reset();
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const scrollToContact = () => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen w-screen overflow-x-hidden">
       {/* Hero Section */}
@@ -16,7 +51,7 @@ const LandingPage = () => {
               Professional translations, QR code access, instant updates.
             </p>
             <button 
-              onClick={() => window.location.href = '#contact'} 
+              onClick={scrollToContact}
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold text-lg flex items-center gap-2 hover:bg-blue-50 transition-colors"
             >
               Get Started <ArrowRight size={20} />
@@ -75,12 +110,20 @@ const LandingPage = () => {
                 Experience how your customers will interact with your translated menu. 
                 Scan the QR code or click to view our demo restaurant menu.
               </p>
-              <button 
-                onClick={() => window.location.href = '/Khmel'}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                View Demo Menu
-              </button>
+              <div className="flex gap-4">
+                <button 
+                  onClick={() => window.location.href = '/Khmel'}
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  View Demo Menu
+                </button>
+                <button 
+                  onClick={scrollToContact}
+                  className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                >
+                  Get Started
+                </button>
+              </div>
             </div>
             <div className="flex-1 flex justify-center">
               <div className="bg-white p-4 rounded-lg shadow-lg">
@@ -109,6 +152,7 @@ const LandingPage = () => {
                 "Basic analytics",
                 "Email support"
               ]}
+              onGetStarted={scrollToContact}
             />
             <PriceCard 
               title="Premium"
@@ -123,53 +167,73 @@ const LandingPage = () => {
                 "API access"
               ]}
               highlighted={true}
+              onGetStarted={scrollToContact}
             />
           </div>
         </div>
       </div>
 
       {/* Contact Section */}
-      <div className="w-full bg-white">
+      <div className="w-full bg-white" id="contact">
         <div className="container mx-auto px-4 py-20 max-w-3xl">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Get Started Today</h2>
-          <form className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Restaurant Name
-              </label>
-              <input 
-                type="text" 
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Enter your restaurant name"
-              />
+          {isSubmitted ? (
+            <div className="bg-green-50 text-green-800 p-4 rounded-lg text-center">
+              <h3 className="text-xl font-semibold mb-2">Thank You!</h3>
+              <p>We've received your message and will get back to you soon.</p>
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Email
-              </label>
-              <input 
-                type="email" 
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Enter your email"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Message
-              </label>
-              <textarea 
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                rows="4"
-                placeholder="Tell us about your needs"
-              />
-            </div>
-            <button 
-              type="submit"
-              className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
+          ) : (
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Restaurant Name
+                </label>
+                <input 
+                  type="text" 
+                  name="restaurant"
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Enter your restaurant name"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Email
+                </label>
+                <input 
+                  type="email" 
+                  name="email"
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Message
+                </label>
+                <textarea 
+                  name="message"
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  rows="4"
+                  placeholder="Tell us about your needs"
+                  required
+                />
+              </div>
+              {error && (
+                <div className="text-red-600 text-sm">{error}</div>
+              )}
+              <button 
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold 
+                  ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-blue-700'} 
+                  transition-colors`}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
+          )}
         </div>
       </div>
 
@@ -211,7 +275,7 @@ const LandingPage = () => {
   );
 };
 
-// Helper components remain unchanged
+// Helper Components
 const FeatureCard = ({ icon, title, description }) => (
   <div className="text-center p-6 bg-white rounded-lg shadow-sm">
     <div className="flex justify-center mb-4">{icon}</div>
@@ -230,7 +294,7 @@ const Step = ({ number, title, description }) => (
   </div>
 );
 
-const PriceCard = ({ title, price, period, features, highlighted = false }) => (
+const PriceCard = ({ title, price, period, features, highlighted = false, onGetStarted }) => (
   <div className={`p-8 rounded-lg shadow-sm ${highlighted ? 'bg-blue-600' : 'bg-white'}`}>
     <h3 className={`text-2xl font-bold mb-2 ${highlighted ? 'text-white' : 'text-gray-900'}`}>
       {title}
@@ -266,6 +330,7 @@ const PriceCard = ({ title, price, period, features, highlighted = false }) => (
       ))}
     </ul>
     <button 
+      onClick={onGetStarted}
       className={`mt-8 w-full py-3 rounded-lg font-semibold transition-colors
         ${highlighted 
           ? 'bg-white text-blue-600 hover:bg-blue-50' 
