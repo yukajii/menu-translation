@@ -258,10 +258,13 @@ const LandingPage = () => {
               <h3 className="text-xl font-bold mb-4">Legal</h3>
               <ul className="text-gray-400 space-y-2">
                 <li>
-                  <a href="#" className="hover:text-white">Terms of Service</a>
+                  <a href="/legal/terms-of-service" className="hover:text-white">Terms of Service</a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">Privacy Policy</a>
+                  <a href="/legal/privacy-policy" className="hover:text-white">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="/legal/cookie-notice" className="hover:text-white">Cookie Notice</a>
                 </li>
               </ul>
             </div>
