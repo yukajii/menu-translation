@@ -1,13 +1,13 @@
 import React from 'react';
-import { ArrowRight, Languages, QrCode, Clock } from 'lucide-react';
+import { ArrowRight, Languages, QrCode, Clock, CreditCard } from 'lucide-react';
 
 const LandingPage = () => {
   return (
-    <div className="relative w-full">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="max-w-6xl mx-auto px-4 py-20">
-          <div className="flex flex-col items-center text-center text-white">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col items-center text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Multilingual Menus Made Simple
             </h1>
@@ -23,12 +23,12 @@ const LandingPage = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Features Section */}
-      <div className="relative bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Choose MenuTap</h2>
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose MenuTap</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard 
               icon={<Languages className="w-12 h-12 text-blue-600" />}
@@ -47,12 +47,12 @@ const LandingPage = () => {
             />
           </div>
         </div>
-      </div>
+      </section>
 
       {/* How It Works */}
-      <div className="relative bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 py-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How It Works</h2>
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Step number="1" title="Submit Your Menu" 
               description="Send us your menu in any format - PDF, images, or text." />
@@ -62,16 +62,16 @@ const LandingPage = () => {
               description="Receive your QR code and digital menu system ready to use." />
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Demo Section */}
-      <div className="relative bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">See It In Action</h2>
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">See It In Action</h2>
           <div className="bg-gray-100 p-8 rounded-lg flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Try Our Demo Menu</h3>
-              <p className="mb-6 text-gray-700">
+              <h3 className="text-2xl font-semibold mb-4">Try Our Demo Menu</h3>
+              <p className="mb-6">
                 Experience how your customers will interact with your translated menu. 
                 Scan the QR code or click to view our demo restaurant menu.
               </p>
@@ -84,19 +84,21 @@ const LandingPage = () => {
             </div>
             <div className="flex-1 flex justify-center">
               <div className="bg-white p-4 rounded-lg shadow-lg">
-                <div className="w-48 h-48 bg-gray-200 rounded flex items-center justify-center text-gray-600">
-                  QR Code Demo
-                </div>
+                <img 
+                  src="/demo-qr.jpg" 
+                  alt="Demo Menu QR Code" 
+                  className="w-48 h-48 object-contain"
+                />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Pricing Section */}
-      <div className="relative bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 py-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Simple Pricing</h2>
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Simple Pricing</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <PriceCard 
               title="Standard"
@@ -126,12 +128,12 @@ const LandingPage = () => {
             />
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Contact Section */}
-      <div className="relative bg-white">
-        <div className="max-w-3xl mx-auto px-4 py-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Get Started Today</h2>
+      <section id="contact" className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Get Started Today</h2>
           <form className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -171,11 +173,11 @@ const LandingPage = () => {
             </button>
           </form>
         </div>
-      </div>
+      </section>
 
       {/* Footer */}
-      <div className="relative bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-12">
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">MenuTap</h3>
@@ -206,40 +208,36 @@ const LandingPage = () => {
             © {new Date().getFullYear()} MenuTap. All rights reserved.
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 };
 
-// Helper Components remain the same
+// Helper Components
 const FeatureCard = ({ icon, title, description }) => (
-  <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+  <div className="text-center p-6">
     <div className="flex justify-center mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold mb-2 text-gray-900">{title}</h3>
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-gray-600">{description}</p>
   </div>
 );
 
 const Step = ({ number, title, description }) => (
-  <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+  <div className="text-center p-6">
     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
       {number}
     </div>
-    <h3 className="text-xl font-semibold mb-2 text-gray-900">{title}</h3>
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-gray-600">{description}</p>
   </div>
 );
 
 const PriceCard = ({ title, price, period, features, highlighted = false }) => (
-  <div className={`p-8 rounded-lg shadow-sm ${highlighted ? 'bg-blue-600' : 'bg-white'}`}>
-    <h3 className={`text-2xl font-bold mb-2 ${highlighted ? 'text-white' : 'text-gray-900'}`}>
-      {title}
-    </h3>
+  <div className={`p-8 rounded-lg ${highlighted ? 'bg-blue-600 text-white' : 'bg-white'}`}>
+    <h3 className="text-2xl font-bold mb-2">{title}</h3>
     <div className="mb-6">
-      <span className={`text-4xl font-bold ${highlighted ? 'text-white' : 'text-gray-900'}`}>
-        {price}
-      </span>
-      <span className={highlighted ? 'text-blue-100' : 'text-gray-600'}>
+      <span className="text-4xl font-bold">{price}</span>
+      <span className={`${highlighted ? 'text-blue-100' : 'text-gray-500'}`}>
         {period}
       </span>
     </div>
@@ -247,7 +245,7 @@ const PriceCard = ({ title, price, period, features, highlighted = false }) => (
       {features.map((feature, index) => (
         <li key={index} className="flex items-center gap-2">
           <svg
-            className={`w-5 h-5 flex-shrink-0 ${highlighted ? 'text-white' : 'text-blue-600'}`}
+            className={`w-5 h-5 ${highlighted ? 'text-blue-100' : 'text-blue-600'}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -259,9 +257,7 @@ const PriceCard = ({ title, price, period, features, highlighted = false }) => (
               d="M5 13l4 4L19 7"
             />
           </svg>
-          <span className={highlighted ? 'text-white' : 'text-gray-700'}>
-            {feature}
-          </span>
+          {feature}
         </li>
       ))}
     </ul>
